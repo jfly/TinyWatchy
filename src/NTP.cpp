@@ -49,6 +49,7 @@ time_t NTP::getTime() {
 
     timeClient.begin();
 
+    timeClient.setTimeOffset(TIMEZONE);
     timeClient.forceUpdate();
 
     timeClient.end();
